@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, cornflowerblue, #f6f6f6);
+    height: 100vh;
+}
+
+.main {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: white;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+}
+
+.main input {
+    padding: 2%;
+    margin-top: 3%;
+}
+
+.main button {
+    background-color: black;
+    margin-top: 3%;
+    width: 100%;
+}
+
+.main button:hover {
+    background-color: rgb(22, 165, 98) !important;
+    transition: all 0.5s;
+}
+
+.maintwo {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 10%;
+    background: white;
+    padding: 2%;
+    border-radius: 20px;
+    border-radius: 10px;
+}
+
+.maintwo input {
+    padding: 2%;
+    margin-top: 3%;
+}
+
+.maintwo button {
+    background-color: black;
+    margin-top: 3%;
+    width: 100%;
+}
+
+.maintwo button:hover {
+    background-color: rgb(22, 165, 98) !important;
+    transition: all 0.5s;
+}
+
+.createaccount {
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+    font-weight: 700;
+    
+}
+
+.dashboard {
+    width: 100%;
+    background: linear-gradient(to right, cornflowerblue, #f6f6f6);
+    padding: 2%;
+}
+
+.dashboard h2 {
+    color: rgb(16, 96, 245);
+    text-transform: capitalize;
+}
+
+.error {
+    color: red;
+    padding-top: 2%;
+    font-family: 700;
+}
+
+.maintwo input::placeholder {
+    color: rgb(97, 97, 97);
+}
+
+.main input::placeholder {
+    color: rgb(97, 97, 97);
+}
+
+@media (max-width: 768px) {
+    .main {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 10%;
+        background-color: white;
+        padding: 2%;
+        border-radius: 20px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    }
+
+    .maintwo {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 10%;
+        background-color: white;
+        padding: 2%;
+        border-radius: 20px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    }
+}
