@@ -94,6 +94,14 @@ body {
     color: rgb(97, 97, 97);
 }
 
+.validcolor{
+    color: green;
+}
+
+.errorcolor{
+    color: red;
+}
+
 @media (max-width: 768px) {
     .main {
         width: 90%;
