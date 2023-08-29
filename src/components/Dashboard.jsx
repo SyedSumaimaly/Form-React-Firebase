@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button } from 'antd';
-import { signOut } from "firebase/auth";
+import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,6 +15,17 @@ function Dashboard(props) {
             console.log(error)
         });
     }
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (values) => {
+            if (values) {
+
+                navigate("/dashboard");
+            } else {
+                navigate("/");
+            }
+        });
+    }, [])
 
     return (
         <div className='dashboard'>

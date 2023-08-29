@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Input, Button } from 'antd';
 import './style.css'
 import {
   Link
 } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, onAuthStateChanged, validatePassword } from "firebase/auth";
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
@@ -52,17 +52,15 @@ function Login() {
     }
 
     signInWithEmailAndPassword(auth, values.email, values.pass)
-      .then(async (res) => {
+      .then((res) => {
         navigate("/dashboard");
       })
       .catch((err) => {
         setErrorMsg(err.message);
         console.log(errorMsg)
       });
+
   };
-
-
-
 
   return (
     <div className='maintwo'>
@@ -77,7 +75,7 @@ function Login() {
         {errorMsg}
       </div>
       <Button type="primary" onClick={handleLogin}>Login</Button>
-      <a><Link className='createaccount' to="/Signup">Create account</Link></a>
+      <Link className='createaccount' to="/Signup">Create account</Link>
     </div>
   )
 }

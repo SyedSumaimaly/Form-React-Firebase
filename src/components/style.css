@@ -66,7 +66,7 @@ body {
     margin: 0 auto;
     text-decoration: none;
     font-weight: 700;
-    
+
 }
 
 .dashboard {
@@ -94,11 +94,11 @@ body {
     color: rgb(97, 97, 97);
 }
 
-.validcolor{
+.validcolor {
     color: green;
 }
 
-.errorcolor{
+.errorcolor {
     color: red;
 }
 
